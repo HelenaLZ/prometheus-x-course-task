@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,418 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
 }
+
+body {
+  background-color: #F5FFFA;
+  color: #222;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 300;  
+ 
+}
+
+.wrapper {
+  width: 95%;
+  margin: 1em auto;
+}
+
+header {
+  position: relative;
+}
+
+header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header .logo {
+  font-weight: 600;
+  font-size: 1.5em;
+  flex-shrink: 5;
+  flex-grow: 1.2;
+  
+}
+
+header nav {    
+  display: flex; 
+  width: 20em; 
+  justify-content: space-around; 
+  align-items: center;  
+  flex-wrap: wrap;  
+}
+
+header nav div { 
+  text-align: center;
+  padding: 0.2em;
+  display: block;
+}
+
+header nav .username {
+  text-align: center;
+  font-weight: 600;
+  transition: transform 400ms ease;
+
+}
+
+header nav img {
+  text-align: center;
+  width: 3em;
+  height: auto;
+  transition: transform 400ms ease;
+
+}
+
+header nav img:hover {
+  transform: scale(1.1) translateY(-0.3em);
+}
+
+header .signout-button {  
+  background: #e6a296;
+  width: 6rem;
+  height: 1.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+  color: #fff;
+  border-radius: 0.5rem;
+  cursor: pointer; 
+  font-weight: 400;
+  transition: transform 400ms ease;
+  display: block;
+  
+}
+
+header .signout-button:hover {
+  transform: scale(1.1) translateY(-0.3em);
+}
+
+header .presentation {
+    margin: 2em 0;
+    background: url("./img/bg.jpg") no-repeat;
+    width: 100%;
+    height: 12em;
+    background-size: cover;
+    background-position: top center;
+   
+}
+
+header .shop-cart {
+  position: absolute;
+  top: 100px;
+  right: -1.5em;
+  width: 650px;
+  min-height: 100px;
+  background: #FFF;
+  border-radius: 0.95em;
+  opacity: 0.9;
+  border:#F4A460 solid 1px;
+  box-shadow: 8px 6px 16px 0px rgba(26,10,1,0.4);
+-webkit-box-shadow: 8px 6px 16px 0px rgba(26,10,1,0.4);
+-moz-box-shadow: 8px 6px 16px 0px rgba(26,10,1,0.4);
+}
+
+footer {
+  text-align: center;
+  margin-top: 6rem;
+}
+
+
+
+.book .atribute, .show-full-book .atribute{
+  font-weight: 600;
+  font-size: 0.9em; 
+}
+
+.book .atribute-meaning, .show-full-book .atribute-meaning{
+  font-size: 1.1em;
+  font-style: italic; 
+  font-weight: 400;
+   
+}
+
+.book img, .show-full-book img { 
+  width: 11em;
+}
+
+.btn-outline-danger, .btn-outline-success {
+  width: 2rem;
+  height: 1.5rem;
+  margin: 0.2rem;
+  background: #6b8da2;
+  border: none;
+  color: #fff;
+  border-radius: 0.2rem;
+}
+
+.btn-outline-danger:hover, .btn-outline-success:hover {
+  transform: scale(1.1) translateY(-0.1em);
+}
+
+
+main .price, .show-full-book .price {
+  color: #2E8B57;
+  font-weight: 600;
+}
+
+main {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+main .book {
+  width: 12rem;
+  margin: 1%;
+  padding: 1%;
+  background: #FFE4C4;
+  position: relative;
+  padding-bottom: 0.5%;
+  border-radius: 0.8em;
+  min-height: 43em;
+}
+
+main div {
+  margin: 0.1em 0.2em;
+  color: #333;
+}
+
+main .view-button {
+  position: absolute;  
+  right: 0.5em;
+  bottom: 0.5em;
+  background: #F4A460;
+  width: 6em;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+  color: #fff;
+  border-radius: 0.5em;
+  cursor: pointer; 
+  font-weight: 400;
+  transition: transform 400ms ease;
+ 
+}
+
+main .view-button:hover {
+  transform: scale(1.1) translateY(-0.3em);
+}
+
+.price-count {
+  width: 15rem;
+  padding-left: 1.5rem;
+}
+
+.price-count .add-to-cart-button {   
+  margin-top: 2rem;
+  background: #2270a1;  
+  width: 7rem;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  color: #fff;
+  border-radius: 0.5rem;
+  cursor: pointer; 
+  font-weight: 400;
+  transition: transform 400ms ease;    
+}
+
+.price-count .add-to-cart-button:hover {
+  transform: scale(1.1) translateY(-0.3em);
+}
+
+
+
+.purchase-complete-screen {
+  position: relative;
+  text-align: center;
+  font-weight: 400;
+  
+}
+
+.purchase-complete-screen img {
+  width: 10rem;
+}
+
+.purchase-complete-screen .purchase-button {   
+  position: absolute;
+  right: 0.5rem;  
+  background: #2270a1;  
+  width: 7rem;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  color: #fff;
+  border-radius: 0.5rem;
+  cursor: pointer; 
+  font-weight: 400;
+  transition: transform 400ms ease;    
+}
+
+.purchase-complete-screen .purchase-button:hover {
+  transform: scale(1.1) translateY(-0.3em);
+}
+
+.show-full-book {
+  display: flex;
+  justify-content: space-around;
+}
+
+.show-full-book img {
+  float:left;
+  margin-right: 1rem;
+}
+
+
+.sign-in-block {
+  text-align: center;
+}
+
+.sign-in-block .avatar-image {
+  width: 10rem;
+  margin-bottom: 0.4rem;
+}
+
+.sign-in-block .signin-button { 
+  margin: -1rem auto 0 auto;
+  background: #22a194;  
+  width: 12rem;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  color: #fff;
+  border-radius: 0.5rem;
+  cursor: pointer; 
+  font-weight: 400;
+  transition: transform 400ms ease;    
+}
+
+.sign-in-block .signin-button:hover {
+  transform: scale(1.1) translateY(-0.3em);
+}
+
+
+.sign-in-block input {
+  margin: auto;
+  padding: 0.2rem;
+  font-size: 1rem;  
+  box-sizing: border-box;
+  width: 12rem;
+  height: 2rem; 
+  border-radius: 0.5rem; 
+  font-weight: 400;
+  border: none;
+  background: #a8ece0;   
+  display: block;
+  text-align: center; 
+  }
+
+@media screen and (max-width: 320px) {
+  .sign-in-block .avatar-image {
+    width: 12.5rem;
+  }
+
+  .sign-in-block .signin-button {    
+    width: 95%;   
+  }  
+ 
+  .sign-in-block input {  
+  width: 95%;  
+  }
+  
+}
+
+
+.total-price {
+  color: red;
+  font-weight: 400;
+}
+
+
+
+@media screen and (min-width: 1173px) and (max-width: 1299px) {
+  main .book {
+    width: 11em;
+    min-height: 43em;
+  }
+
+  .book img {
+    width: 10em;
+  }
+}
+
+
+@media screen and (min-width: 738px) and (max-width: 1172px) {
+  main .book {
+    width: 9em;
+    min-height: 46em;
+  }
+
+  .book img {
+    width: 8em;
+  }
+}
+
+@media screen and (min-width: 656px) and (max-width: 737px) {
+  main .book {
+    width: 8em;
+    min-height: 54em;
+  }
+
+  .book img {
+    width: 7em;
+  }
+}
+
+@media screen and (min-width: 533px) and (max-width: 655px) {
+  main .book {
+    width: 9em;
+    min-height: 48em;
+  }
+
+  .book img {
+    width: 8em;
+  }
+}
+
+@media screen and (min-width: 452px) and (max-width: 532px) {
+  main .book {
+    width: 12em;
+    min-height: 48em;
+  }
+
+  .book img {
+    width: 8em;
+  }
+}
+
+
+@media screen and (max-width: 451px) {
+  main .book {
+    width: 20em;
+    min-height: 37em;
+  }
+
+  .book img {
+    width: 15em;
+  }
+
+  .purchase-complete-screen .purchase-button { 
+    margin: auto;
+    position: static;
+  }
+}
+
+
+
