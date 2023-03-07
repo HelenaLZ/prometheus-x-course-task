@@ -4,8 +4,7 @@ import avatar from "../img/avatar.png"
 import { Link } from 'react-router-dom';
 
 
-export default function Header() {
-  let [cartOpen, setCartOpen] = useState(false);
+export default function Header() {  
 
   return (
     <header>

@@ -1,7 +1,7 @@
 import React from 'react'
 import cart from "../img/cart.svg"
 import Header from './Header'
-import { Link } from 'react-router-dom'
+
 
 
 
