@@ -5,8 +5,12 @@ import Slider from './Slider'
 export class ShowFullBook extends Component {
   //const [this.props.bookbook, setValue] = useState(this.state.fullBook);
 
-
-
+  constructor(props) {
+    super(props)
+    this.state = {
+        value: 1,        
+    }
+  }
 
 
 
@@ -23,9 +27,12 @@ export class ShowFullBook extends Component {
             <div><span className="atribute">Book short description: </span>{this.props.book.shortDescription}</div>            
           </div>
           <div className = "price-count">
-            <div><span className="price">Price:  ${this.props.book.price}</span></div>       
-            <Slider value="0" price={this.props.book.price}/>      
-
+            <div>
+              <span className="price">Price:  ${this.props.book.price}</span>
+            </div>       
+              {/* <Slider value="0" price={this.props.book.price}/>       */}
+            <input type="number" id="addToCartInput" name="tentacles" min="0" max="6" defaultValue={this.state.value} onChange = {event => this.setState(({value}) => ({value: event.target.value}))}></input>            
+            <div className="total-price">Total price: $ {(this.props.book.price*this.state.value).toFixed(2)}</div>            
             <div className = "add-to-cart-button" onClick={() => this.props.onShowBook(this.props.book)}>Add to cart</div> 
           </div>
         </div>
