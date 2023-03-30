@@ -152,21 +152,6 @@ footer {
   width: 11em;
 }
 
-.btn-outline-danger, .btn-outline-success {
-  width: 2rem;
-  height: 1.5rem;
-  margin: 0.2rem;
-  background: #6b8da2;
-  border: none;
-  color: #fff;
-  border-radius: 0.2rem;
-}
-
-.btn-outline-danger:hover, .btn-outline-success:hover {
-  transform: scale(1.1) translateY(-0.1em);
-}
-
-
 main .price, .show-full-book .price {
   color: #2E8B57;
   font-weight: 600;

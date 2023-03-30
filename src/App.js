@@ -39,9 +39,9 @@ class App extends React.Component {
       <div className="wrapper">        
         <Routes>        
          <Route path="/" element={<Signin/>} /> 
-         <Route path="BookList" element ={<BookList   onShowBook = {this.onShowBook}  books = {this.state.books} />} /> 
-         <Route path = "BookList/:BookID" element = {<ShowFullBook book = {this.state.fullBook}/>}/> 
-         <Route path="/cart" element={<PurchaseCompleteScreen/>} /> 
+         <Route path="BookList" element ={<BookList   onShowBook = {this.onShowBook}  books = {this.state.books}  />} /> 
+         <Route path = "BookList/:BookID" element = {<ShowFullBook  book = {this.state.fullBook} onAdd={this.addToOrder}/>}/> 
+         <Route path="/cart" element={<PurchaseCompleteScreen orders = {this.state.orders} />} /> 
         </Routes> 
          {/* <BookList onShowBook = {this.onShowBook} books = {this.state.books} />          
          {this.state.showFullBook && <ShowFullBook book = {this.state.fullBook}/>} */}
@@ -59,10 +59,15 @@ class App extends React.Component {
    }
 
    addToOrder(book) {
-     this.setState({ orders: [...this.state.orders, book] })
-  }
+    let isInArray = false
+    this.state.orders.forEach(el=>{
+      if(el.id === book.id)
+      isInArray = true
+    })
 
- 
+    if(!isInArray)
+     this.setState({ orders: [...this.state.orders, book] })
+  } 
 }
 
 
