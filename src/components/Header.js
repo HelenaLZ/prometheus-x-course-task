@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header>
             <div>
-                <div className = "logo">JS BAND STORE / X-course task / Olena Zaiets</div> 
+                <div className = "logo">JS BAND STORE / X-course task /</div> 
                 <nav>                                     
                  {/* <Link to="cart"><div><img src={cart} alt="cart" className="cart-button" onClick={() => setCartOpen(cartOpen = !cartOpen)}/></div></Link> */}
                  {/* {cartOpen && (
