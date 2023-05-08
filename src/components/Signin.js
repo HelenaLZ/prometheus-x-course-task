@@ -9,7 +9,7 @@ export class Signin extends Component {
       <div>
         <header>
             <div>
-                <div className = "logo">JS BAND STORE / X-course task / Olena Zaiets</div>                           
+                <div className = "logo">JS BAND STORE / X-course task /</div>                           
             </div>
             <div className = "presentation"></div>  
         </header>

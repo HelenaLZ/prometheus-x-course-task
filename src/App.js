@@ -9,6 +9,7 @@ import Signin from "./components/Signin"
 import ShowFullBook from "./components/ShowFullBook"
 import Books from "./misc/BooksData"
 import PurchaseCompleteScreen from "./components/PurchaseCompleteScreen"
+import ErrorPage from "./components/ErrorPage"
 
 
 
@@ -39,9 +40,10 @@ class App extends React.Component {
       <div className="wrapper">        
         <Routes>        
          <Route path="/" element={<Signin/>} /> 
-         <Route path="BookList" element ={<BookList   onShowBook = {this.onShowBook}  books = {this.state.books}  />} /> 
+         <Route path="BookList/" element ={<BookList   onShowBook = {this.onShowBook}  books = {this.state.books}  />} /> 
          <Route path = "BookList/:BookID" element = {<ShowFullBook  book = {this.state.fullBook} onAdd={this.addToOrder}/>}/> 
          <Route path="/cart" element={<PurchaseCompleteScreen orders = {this.state.orders} />} /> 
+         <Route path="*" element= {<ErrorPage />}/>
         </Routes> 
          {/* <BookList onShowBook = {this.onShowBook} books = {this.state.books} />          
          {this.state.showFullBook && <ShowFullBook book = {this.state.fullBook}/>} */}
